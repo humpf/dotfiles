@@ -227,8 +227,8 @@ globalkeys = awful.util.table.join(
 
     -- Volume
 
-    awful.key({}, "#122", function () awful.util.spawn("python3 /home/arne/Documents/python/Volume/volume_down.py") end),
-    awful.key({}, "#123", function () awful.util.spawn("python3 /home/arne/Documents/python/Volume/volume_up.py") end),
+    awful.key({}, "#122", function () awful.util.spawn("python3 /home/arne/.config/awesome/volume/volume_down.py") end),
+    awful.key({}, "#123", function () awful.util.spawn("python3 /home/arne/.config/awesome/volume/volume_up.py") end),
 
     -- Prompt
     awful.key({ modkey },            "r",     function () mypromptbox[mouse.screen]:run() end),
