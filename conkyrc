@@ -1,0 +1,78 @@
+use_xft yes
+xftfont Bitstream Vera Sans Mono:size=16
+xftalpha 0.8
+
+update_interval 0.8
+total_run_times 0
+
+own_window yes
+own_window_transparent yes
+own_window_type desktop 
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+own_window_argb_visual yes
+own_window_argb_value 200
+
+
+background yes
+double_buffer yes
+
+draw_shades no
+draw_outline no
+draw_borders no
+strippled_borders 0
+border_margin 6
+border_width 1
+draw_graph_borders yes
+
+alignment middle_right
+gap_x 40
+maximum_width 450
+ 
+uppercase no
+
+default_color f0f8ff # AliceBlue
+color1 000000 # black
+color2 8a2be2 # BlueViolet
+color3 006400 # DarkGreen
+color4 ff0000 # red1
+color5 008b45 # SpringGreen4
+color6 6495ed # CornflowerBlue
+color7 cd8162 # LightSalmon3
+color8 ffc125 # goldenrod1
+color9 8b1a1a # firebrick4
+
+TEXT
+${color2}System
+${color}Kernel: ${color6}$kernel
+${color}MAC:    ${color6}${wireless_ap wlan0}
+#${color}IP:     ${color6}${execi 3600 curl -s http://automation.whatismyip.com/n09230945.asp }
+${color}Memory: ${color7}$memperc% ($mem)
+${color}CPU:    ${color7}${cpu cpu0}%
+${color}Volume: ${color7}${execi 1 /home/arne/scripts/get_vol.sh}%
+$hr
+${color2}Internet
+${color}Wlan:   ${color6}${wireless_bitrate wlan0}    ${wireless_link_qual_perc wlan0}%
+${color}Download:${color6}${downspeed wlan0}/s
+${color}${downspeedgraph wlan0 20,300 008b45 ff0000 2000KiB -l -t}
+${color}Upload: ${color6}${upspeed wlan0}/s
+${color}${upspeedgraph wlan0 20,300 008b45 ff0000 100KiB -l -t}
+$hr
+${color2}Filesystem
+${color}Root:   ${color8}${fs_bar /}
+${color}Home:   ${color8}${fs_bar /home}
+$hr
+${if_mpd_playing}
+${color3}${mpd_artist}
+$mpd_title
+${color5}$mpd_status   $mpd_elapsed/$mpd_length $mpd_percent%
+ ${mpd_bar} 
+$hr
+$endif
+${color2}Processes
+${color}No. of Processes:${color6}${processes}
+${color}Top Processes:
+${color8}Name              Mem%  Cpu%
+${color9}${top_mem name 1}${top_mem mem 1}${top_mem cpu 1}
+${top_mem name 2}${top_mem mem 2}${top_mem cpu 2}
+${top_mem name 3}${top_mem mem 3}${top_mem cpu 3}
+${top_mem name 4}${top_mem mem 4}${top_mem cpu 4}

@@ -1,0 +1,12 @@
+urxvt*termName:     rxvt-256color
+urxvt*loginShell:   true
+urxvt*scrollBar:    false
+urxvt*saveLines:    1200
+urxvt*urgentOnBell: true
+urxvt*urllauncher:  firefox
+! Transparency
+urxvt.depth: 32
+urxvt.background: [65]#000000
+urxvt*foreground: green
+urxvt*font: xft:DejaVu Sans Mono:pixelsize=18:antialias=false
+
