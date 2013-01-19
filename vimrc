@@ -72,10 +72,6 @@ set t_Co=256
 
 colorscheme wombat256
 set background=dark
-" transparency
-"let g:solarized_termtrans = 1
-"colorscheme solarized
-" hi Normal ctermbg=NONE
 
 " tab completion
 set wildmenu
