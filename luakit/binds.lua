@@ -423,7 +423,7 @@ add_binds("normal", {
         local view = w.view
         local uri = view.hovered_uri or view.uri
         if uri then
-            luakit.spawn(string.format("urxvtc -e /home/arne/scripts/youtube_mplayer.sh %q  " ,uri))
+            luakit.spawn(string.format("urxvtc -e ~/scripts/youtube_mplayer.sh %q  " ,uri))
         end 
     end),
 })
