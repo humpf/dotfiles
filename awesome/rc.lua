@@ -224,6 +224,11 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(layouts, -1) end),
 
     awful.key({ modkey, "Control" }, "n", awful.client.restore),
+
+    --dmenu
+    awful.key({ modkey,           }, "d", function () awful.util.spawn("dmenu_run") end),
+    --dmenu file
+    awful.key({ modkey,           }, "v", function () awful.util.spawn_with_shell("cat ~/.dmenufile_cache | dmenu -i | xargs xdg-open") end),
     
     -- Volume
 
