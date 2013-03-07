@@ -235,6 +235,13 @@ globalkeys = awful.util.table.join(
     awful.key({}, "#122", function () awful.util.spawn_with_shell("~/.config/awesome/volume/volume_down.py") end),
     awful.key({}, "#123", function () awful.util.spawn_with_shell("~/.config/awesome/volume/volume_up.py") end),
 
+    -- application switcher
+    awful.key({ "Mod1"}, "Tab", function ()
+        -- if the menu should allways be on the same place 
+        awful.menu.menu_keys.down = { "Down", "Alt_L" }
+        local cmenu = awful.menu.clients({width=245}, { keygrabber=true, coords={x=525, y = 330} })
+    end),
+
     -- Prompt
     awful.key({ modkey },            "r",     function () mypromptbox[mouse.screen]:run() end),
 

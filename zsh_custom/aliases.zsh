@@ -75,3 +75,8 @@ alias ts='tmux source-file ~/.tmux.conf'
 alias vconky='vim ~/.conkyrc'
 alias vurls='vim ~/.newsbeuter/urls'
 alias vawe='vim ~/.config/awesome/rc.lua'
+
+# rtmp live streams
+sniff-begin() { sudo iptables -t nat -A OUTPUT -p tcp --dport 1935 -m owner \! --uid-owner root -j REDIRECT ;}
+sniff-capture-rtmpsrv() { rtmpsrv ;}
+sniff-end() { sudo iptables -t nat -D OUTPUT -p tcp --dport 1935 -m owner \! --uid-owner root -j REDIRECT ;}
