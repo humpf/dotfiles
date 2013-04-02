@@ -426,6 +426,15 @@ add_binds("normal", {
             luakit.spawn(string.format("urxvtc -e %q/.config/luakit/youtube_mplayer.sh %q" ,os.getenv("HOME"), uri))
         end 
     end),
+    -- download youtube-dl and send notification
+    key({}, "q", function (w) 
+        local view = w.view
+        local uri = view.hovered_uri or view.uri
+        if uri then
+            luakit.spawn(string.format("urxvtc -e %q/.config/luakit/youtube_mplayer_down.sh %q" ,os.getenv("HOME"), uri))
+        end 
+    end),
+
 })
 
 add_binds("insert", {
