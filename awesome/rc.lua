@@ -11,8 +11,8 @@ require("naughty")
 require("debian.menu")
 
 -- {{{ Variable definitions
--- Themes define colours, icons, and wallpapers
-beautiful.init("/home/arne/.config/awesome/theme.lua")
+-- Themes define colours, icons, and wallpaper
+beautiful.init(awful.util.getdir("config") .. "/themes/bamboo/theme.lua")
 
 --Autostart conky , xcomp , urxvtd
 --awful.util.spawn("/home/arne/scripts/conky.sh")
