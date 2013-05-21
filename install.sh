@@ -4,7 +4,7 @@
 
 dir=~/dotfiles
 configdir=~/.config
-olddir=~/dotfiles_old
+olddir=~/old_dotfiles
 files="bashrc bash_aliases vimrc vim zshrc conkyrc tmux.conf Xdefaults newsbeuter gitconfig" # list of dotfiles/dotfolders
 
 configfiles="zathura awesome luakit"
@@ -21,7 +21,7 @@ cd $dir
 
 for file in $files; do
     echo "copy old dotfiles"
-    mv ~/.$file ~/dotfiles_old/
+    mv ~/.$file ~/old_dotfiles/
     echo "..done"
     echo "symlinking new dotfiles"
     ln -s $dir/$file ~/.$file
@@ -30,7 +30,7 @@ done
 
 for conf in $configfiles; do
     echo "copy old config files"
-    mv $configdir/$conf ~/dotfiles_old
+    mv $configdir/$conf ~/old_dotfiles
     echo "...done"
     echo "symlinking new config files"
     ln -s $dir/$conf $configdir/$conf
