@@ -39,7 +39,7 @@ set foldlevel=99
 set cpoptions+=$
 
 " linenumbering
-set nu
+"set nu
 " toggle relative and absolute
 function! g:ToggleNuMode()
     if(&rnu==1)
