@@ -76,6 +76,11 @@ set background=dark
 " tab completion
 set wildmenu
 
+" no swap or backup files
+set noswapfile
+set nobackup
+set nowb
+
 " tex type latex
 let g:tex_flavor='latex'
 let g:Tex_SmartKeyQuote=0
