@@ -229,6 +229,8 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey,           }, "d", function () awful.util.spawn_with_shell( "exe=`dmenu_run -nb '#63B8FF' -sb '#EE4000' -nf '#000000' -fn '-*-*-bold-*-*-*-18-*-*-*-*-*-*-*'` && exec $exe") end),
     --dmenu file
     awful.key({ modkey,           }, "v", function () awful.util.spawn_with_shell("exe2=`cat ~/.dmenufile_cache | dmenu -i -nb '#63B8FF' -sb '#EE4000' -nf '#000000' -fn '-*-*-bold-*-*-*-18-*-*-*-*-*-*-*' | xargs xdg-open` && exec exe2") end),
+    --demnu mounter
+    awful.key({ modkey,           }, "a", function () awful.util.spawn_with_shell("~/.config/awesome/dmenu_mount.sh") end),
     
     -- Volume
 
