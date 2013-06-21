@@ -1,6 +1,6 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
-
+export ZSH
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -34,3 +34,5 @@ plugins=(git vi-mode compleat extract debian autojump)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+# use fasd
+eval "$(fasd --init auto)"

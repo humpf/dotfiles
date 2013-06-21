@@ -202,7 +202,8 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey,           }, "u", awful.client.urgent.jumpto),
     awful.key({ modkey,           }, "Tab",
         function ()
-            awful.client.focus.history.previous()
+            --awful.client.focus.history.previous()
+            awful.client.focus.byidx(-1)
             if client.focus then
                 client.focus:raise()
             end
@@ -240,7 +241,7 @@ globalkeys = awful.util.table.join(
     -- application switcher
     awful.key({ "Mod1"}, "Tab", function ()
         -- if the menu should allways be on the same place 
-        awful.menu.menu_keys.down = { "Down", "Alt_L" }
+        awful.menu.menu_keys.down = { "Down", "Tab" }
         local cmenu = awful.menu.clients({width=245}, { keygrabber=true, coords={x=525, y = 330} })
     end),
 

@@ -1,12 +1,9 @@
 http://tuxmachines.org/node/feed linux
-http://distrowatch.com/news/dw.xml linux
 http://linuxjournal.com/node/feed linux
 http://feeds.feedburner.com/d0od linux
 http://osnews.com/feed linux
-http://phoronix.com/rss.php linux
 http://lwn.net/headlines/rss linux
 http://lxer.com/module/newswire/headlines.rss linux
-http://feeds.feedburner.com/Liliputing linux
 http://www.howtoforge.com/rss/linux.rss linux
 http://feeds.arstechnica.com/arstechnica/index/ linux
 http://www.h-online.com/grand-atom.xml linux
@@ -25,9 +22,9 @@ http://reddit.com/r/vim/.rss linux
 http://reddit.com/r/commandline/.rss linux
 http://dedoimedo.com/rss_feed.xml linux
 http://feeds.feedburner.com/TerminallyIncoherent linux
+http://nullprogram.com/blog/index.rss linux
+http://feeds.feedburner.com/LinuxHatersBlog linux
 http://blog.sanctum.geek.nz/feed/ linux
 http://inconsolation.wordpress.com/feed/ linux
-http://weltderphysik.de/RSS-alles physics
-http://www.pro-physik.de/graphicalrss/prophy/newsFeed.xml physics
-http://physnews.com/feed.xml physics
-http://phys.org/rss-feed/physics-news physics
+http://physicsandphysicists.blogspot.com/feeds/posts/default physics
+http://themindofatheorist-theblog.blogspot.com/feeds/posts/default physics
