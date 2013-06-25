@@ -36,3 +36,4 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 # use fasd
 eval "$(fasd --init auto)"
+export BROWSER=luakit
