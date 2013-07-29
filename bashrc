@@ -183,8 +183,8 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 # Added by autojump install.sh
-source /etc/profile
-source /etc/profile.d/autojump.bash
+#source /etc/profile
+#source /etc/profile.d/autojump.bash
 
 # prompt
 export PS1="\[$BICyan\]\u \[$BIYellow\]\w \[$IGreen\]\$ \[$BIWhite\]> \[$IPurple\]"

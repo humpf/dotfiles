@@ -349,10 +349,10 @@ add_binds("normal", {
     key({"Shift","Control"}, "Tab", "Go to previous tab.",
         function (w) w:prev_tab() end),
 
-    buf("^gT$", "Go to previous tab.",
+    buf("^K$", "Go to previous tab.",
         function (w) w:prev_tab() end),
 
-    buf("^gt$", "Go to next tab (or `[count]` nth tab).",
+    buf("^J$", "Go to next tab (or `[count]` nth tab).",
         function (w, b, m)
             if not w:goto_tab(m.count) then w:next_tab() end
         end, {count=0}),
@@ -423,7 +423,7 @@ add_binds("normal", {
         local view = w.view
         local uri = view.hovered_uri or view.uri
         if uri then
-            luakit.spawn(string.format("urxvtc -e %q/.config/luakit/youtube_mplayer.sh %q" ,os.getenv("HOME"), uri))
+            luakit.spawn(string.format("urxvt -e %q/.config/luakit/youtube_mplayer.sh %q" ,os.getenv("HOME"), uri))
         end 
     end),
     -- download youtube-dl and send notification
@@ -431,7 +431,7 @@ add_binds("normal", {
         local view = w.view
         local uri = view.hovered_uri or view.uri
         if uri then
-            luakit.spawn(string.format("urxvtc -e %q/.config/luakit/youtube_mplayer_down.sh %q" ,os.getenv("HOME"), uri))
+            luakit.spawn(string.format("urxvt -e %q/.config/luakit/youtube_mplayer_down.sh %q" ,os.getenv("HOME"), uri))
         end 
     end),
 
