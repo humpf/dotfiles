@@ -190,3 +190,5 @@ fi
 export PS1="\[$BICyan\]\u \[$BIYellow\]\w \[$IGreen\]\$ \[$BIWhite\]> \[$IPurple\]"
 # vim keybindings
 set -o vi
+# make completion zsh-like
+bind 'TAB:menu-complete'
