@@ -12,6 +12,7 @@ alias _='sudo'
 alias history='fc -l 1'
 
 # List direcory contents
+alias ls='ls --color=auto'
 alias lsa='ls -lah'
 alias l='ls -la'
 alias ll='ls -l'
@@ -96,3 +97,6 @@ alias m='f -e mplayer'
 
 # mountie script
 alias mountie='python3 ~/Compile/mountie/mountie.py'
+
+# HDMI left of LVDS
+alias hdleft='xrandr --output HDMI1 --auto --left-of LVDS1'
