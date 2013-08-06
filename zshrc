@@ -1,39 +1,43 @@
-# Path to your oh-my-zsh configuration.
-ZSH=$HOME/.oh-my-zsh
-export ZSH
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-ZSH_THEME="my_own_cool_theme"
+# The following lines were added by compinstall
 
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+autoload -U compinit
+compinit
 
-# Set to this to use case-sensitive completion
-# CASE_SENSITIVE="true"
+zstyle ':completion:*' menu select
+# End of lines added by compinstall
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+# End of lines configured by zsh-newuser-install
+# colors
+autoload -U colors && colors
+# vi mode
+bindkey -v
+# sourcing git from oh-my
+#source ~/dotfiles/git.zsh
+#function precmd {
+#    ~/dotfiles/git.zsh
+#}
+source ~/dotfiles/completion.zsh
+# sourcing alias files
+source ~/dotfiles/aliases.zsh
+source ~/dotfiles/alias_suffix.zsh
+# theme
+#source ~/dotfiles/my_own_cool_theme.zsh-theme
 
-# Comment this out to disable weekly auto-update checks
-# DISABLE_AUTO_UPDATE="true"
 
-# Uncomment following line if you want to disable colors in ls
-# DISABLE_LS_COLORS="true"
-
-# Uncomment following line if you want to disable autosetting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment following line if you want red dots to be displayed while waiting for completion
-# COMPLETION_WAITING_DOTS="true"
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git vi-mode compleat extract debian autojump)
-
-source $ZSH/oh-my-zsh.sh
-
-# Customize to your needs...
-# use fasd
+# fasd initialization
 eval "$(fasd --init auto)"
-export BROWSER=luakit
+
+# git prompt
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' enable git
+zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:git*' formats "%{$fg[green]%}%b%{$reset_color%}%u "
+zstyle ':vcs_info:*' unstagedstr '%F{11}⚡'
+precmd() {
+    vcs_info
+}
+setopt prompt_subst
+PROMPT='%{$fg[magenta]%}%n%{$reset_color%}%{$fg[red]%}:%{$reset_color%}%{$fg[cyan]%}%0~%{$reset_color%}%{$fg[red]%}|%{$reset_color%}${vcs_info_msg_0_}%{$fg[cyan]%}⇒%{$reset_color%}  '
