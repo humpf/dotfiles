@@ -30,6 +30,17 @@ source ~/dotfiles/alias_suffix.zsh
 # fasd initialization
 eval "$(fasd --init auto)"
 
+# vi-mode indicator
+
+function zle-line-init zle-keymap-select {
+    local vicmd="%{$fg[green]%}<<<<%{$reset_color%}"
+    RPS1="${${KEYMAP/vicmd/${vicmd}}/(main|viins)/}"
+    RPS2=$RPS1
+    zle reset-prompt
+}
+zle -N zle-line-init
+zle -N zle-keymap-select
+
 # git prompt
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git
