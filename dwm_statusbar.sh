@@ -26,4 +26,22 @@ cpu () {
     cpu=$(ps aux | awk {'sum+=$3;print sum'} | tail -n1)
     echo -e "Cpu:$cpu%"
 }
-xsetroot -name "$(cpu) $(mem) $(battery) $(date +"%d-%m-%y %R") "
+vol () {
+    volume=$(amixer get Master | egrep -o "[0-9]+%")
+    volume_val=$(echo $volume | sed 's/%//')
+    mute_stat=$(amixer get Master | egrep -o "[+[a-z]+]")
+
+    if [ "$mute_stat" == "[off]" ];then
+        vol_sym=$(echo '\uE052')
+    else
+        if [ $volume_val -gt 66 ]; then
+            vol_sym=$(echo '\uE152')
+        elif [ $volume_val -gt 33 ]; then
+            vol_sym=$(echo '\uE053')
+        else 
+            vol_sym=$(echo '\uE051')
+        fi
+    fi
+    echo -e "$vol_sym:$volume"
+}
+xsetroot -name "$(cpu) $(mem) $(vol) $(battery) $(date +"%d-%m-%y %R")"
