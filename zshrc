@@ -22,6 +22,7 @@ bindkey -v
 #    ~/dotfiles/git.zsh
 #}
 source ~/dotfiles/completion.zsh
+source ~/dotfiles/correction.zsh
 # sourcing alias files
 source ~/dotfiles/aliases.zsh
 source ~/dotfiles/alias_suffix.zsh
