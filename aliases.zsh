@@ -47,7 +47,7 @@ alias shutdown='sudo shutdown -h now'
 alias reboot='sudo reboot'
 
 # memory leaks and debugging c
-alias valgrind='valgrind --track-origins=yes'
+#alias valgrind='valgrind --track-origins=yes'
 
 # start gothic 2 notr
 alias gothic='wine ~/.wine/drive_c/Program\ Files/Jowood/Gothic\ II/System/GothicStarter.exe'
