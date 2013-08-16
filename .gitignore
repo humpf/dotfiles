@@ -1,0 +1,2 @@
+# ignore these files in git
+vim/.netrwhist
