@@ -8,23 +8,23 @@ battery () {
         bat_c_sym=$(echo '\uE041')
     fi
     if [ $bat_num -gt 75 ]; then
-        bat_sym=$(echo '\uE033')
+        bat_sym=$(echo '\x04\uE033')
     elif [ $bat_num -gt 50 ]; then
-        bat_sym=$(echo '\uE032')
+        bat_sym=$(echo '\x04\uE032')
     elif [ $bat_num -gt 25 ]; then
-        bat_sym=$(echo '\uE031')
+        bat_sym=$(echo '\x05\uE031')
     else 
-        bat_sym=$(echo '\uE030')
+        bat_sym=$(echo '\x03\uE030')
     fi
-    echo -e "$bat_c_sym$bat_sym:$bat_perc"
+    echo -e "$bat_c_sym$bat_sym:$bat_perc\x01"
 }
 mem () {
     me=$(free -m | awk '/^-/ {print$3}')
-    echo -e "Mem:$me"
+    echo -e "\x08Mem:$me\x01"
 }
 cpu () {
     cpu=$(ps aux | awk {'sum+=$3;print sum'} | tail -n1)
-    echo -e "Cpu:$cpu%"
+    echo -e "\x09Cpu:$cpu%\x01"
 }
 vol () {
     volume=$(amixer get Master | egrep -o "[0-9]+%")
@@ -42,6 +42,6 @@ vol () {
             vol_sym=$(echo '\uE051')
         fi
     fi
-    echo -e "$vol_sym:$volume"
+    echo -e "\x06$vol_sym:$volume\x01"
 }
 xsetroot -name "$(cpu) $(mem) $(vol) $(battery) $(date +"%d-%m-%y %R")"
