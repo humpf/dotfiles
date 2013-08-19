@@ -27,7 +27,7 @@ cpu () {
     echo -e "\x09Cpu:$cpu%\x01"
 }
 vol () {
-    volume=$(amixer get Master | egrep -o "[0-9]+%")
+    volume=$(amixer get PCM | egrep -o -m1 "[0-9]+%")
     volume_val=$(echo $volume | sed 's/%//')
     mute_stat=$(amixer get Master | egrep -o "[+[a-z]+]")
 
