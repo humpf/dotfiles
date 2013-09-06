@@ -35,8 +35,11 @@ syntax enable
 set foldmethod=indent
 set foldlevel=99
 
-" unrelated
+" add $ at end point of change
 set cpoptions+=$
+
+" not adding comment sign on next line after comment
+set formatoptions-=or
 
 " linenumbering
 "set nu
