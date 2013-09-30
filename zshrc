@@ -11,24 +11,19 @@ HISTSIZE=1000
 SAVEHIST=1000
 # End of lines configured by zsh-newuser-install
 # browser
-BROWSER=luakit
+export BROWSER=luakit
+# editor vim
+export EDITOR=vim
 # colors
 autoload -U colors && colors
 # vi mode
 bindkey -v
 # sourcing git from oh-my
-#source ~/dotfiles/git.zsh
-#function precmd {
-#    ~/dotfiles/git.zsh
-#}
 source ~/dotfiles/completion.zsh
 source ~/dotfiles/correction.zsh
 # sourcing alias files
 source ~/dotfiles/aliases.zsh
 source ~/dotfiles/alias_suffix.zsh
-# theme
-#source ~/dotfiles/my_own_cool_theme.zsh-theme
-
 
 # fasd initialization
 eval "$(fasd --init auto)"
