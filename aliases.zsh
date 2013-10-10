@@ -59,7 +59,7 @@ alias mnb='wine ~/.wine/drive_c/Program\ Files/Mount\&Blade\ Warband/mb_warband.
 alias gog='surfraw google'
 
 # start iftop on wireless
-alias iftop='sudo iftop -i wlan0'
+#alias iftop='sudo iftop -i wlan0'
 
 #watch rar videos + password
 alias vid='~/scripts/video.sh'
