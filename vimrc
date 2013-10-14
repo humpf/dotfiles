@@ -42,17 +42,7 @@ set cpoptions+=$
 set formatoptions-=or
 
 " linenumbering
-"set nu
-" toggle relative and absolute
-function! g:ToggleNuMode()
-    if(&rnu==1)
-        set nu
-    else
-        set rnu
-    endif
-endfunc
-" map this to Ctrl-l
-nnoremap <C-l> :call g:ToggleNuMode()<cr>
+set nu
 
 " search
 set incsearch " start search as you type
