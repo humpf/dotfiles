@@ -1,4 +1,4 @@
-
+# zsh aliases
 # Basic directory operations
 alias ...='cd ../..'
 alias -- -='cd -'
@@ -82,7 +82,7 @@ alias homecache='~/dotfiles/caching.sh'
 alias vconky='vim ~/.conkyrc'
 alias vurls='vim ~/.newsbeuter/urls'
 alias vtmux='vim ~/.tmux.conf'
-alias valiases='vim ~/.oh-my-zsh/custom/aliases.zsh'
+alias valiases='vim ~/dotfiles/aliases.zsh'
 alias vvim='vim ~/.vimrc'
 alias vawesome='vim ~/.config/awesome/rc.lua'
 alias vluakit='vim ~/.config/luakit/rc.lua'
@@ -103,3 +103,4 @@ alias mountie='python3 ~/Compile/mountie/mountie.py'
 alias hdleft='xrandr --output HDMI1 --auto --left-of LVDS1 && mv ~/.asoundhdmi ~/.asoundrc'
 # HDMI turn off
 alias hdoff='xrandr --output HDMI1 --off && mv ~/.asoundrc ~/.asoundhdmi'
+
