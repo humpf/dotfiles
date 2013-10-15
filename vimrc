@@ -68,6 +68,10 @@ set background=dark
 
 " tab completion
 set wildmenu
+set wildignore=*.pyc,*.aux,*.lot,*.out,*.lof,*.log,*.toc " ignore latex produced files
+
+" path to search through
+set path+=**
 
 " no swap or backup files
 set noswapfile
