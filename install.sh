@@ -5,7 +5,7 @@
 dir=~/dotfiles
 configdir=~/.config
 olddir=~/old_dotfiles
-files="bashrc bash_aliases vimrc vim zshrc conkyrc tmux.conf Xdefaults gitconfig" # list of dotfiles/dotfolders
+files="bashrc bash_aliases vimrc vim zshrc conkyrc tmux.conf Xdefaults gitconfig vimperatorrc" # list of dotfiles/dotfolders
 
 configfiles="zathura awesome luakit"
 
