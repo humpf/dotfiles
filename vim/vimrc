@@ -12,9 +12,9 @@ set showmode
 
 " persistent undo
 set undofile
-"set undodir=$HOME/.local/share/undo
+set undodir=$HOME/.local/share/undo
 
-" set hidden
+" set hidden file
 set hidden
 
 "tabing
@@ -58,6 +58,9 @@ nmap <silent> <leader><space> :nohlsearch<CR>
 " make h,j,k,l move between visual lines
 nnoremap j gj
 nnoremap k gk
+
+" file explorer
+map <leader>e :Ex<CR>
 
 " make useful status line
 set laststatus=2
