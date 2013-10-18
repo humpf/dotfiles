@@ -83,7 +83,7 @@ alias vconky='vim ~/.conkyrc'
 alias vurls='vim ~/.newsbeuter/urls'
 alias vtmux='vim ~/.tmux.conf'
 alias valiases='vim ~/dotfiles/aliases.zsh'
-alias vvim='vim ~/.vimrc'
+alias vvim='vim ~/.vim/vimrc'
 alias vawesome='vim ~/.config/awesome/rc.lua'
 alias vluakit='vim ~/.config/luakit/rc.lua'
 
