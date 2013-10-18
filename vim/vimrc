@@ -10,11 +10,14 @@ set nocompatible
 " show mode your in
 set showmode
 
+" persistent undo
+set undofile
+"set undodir=$HOME/.local/share/undo
+
 " set hidden
 set hidden
 
 "tabing
-
 set smarttab 
 set tabstop=8
 set shiftwidth=4
