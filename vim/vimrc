@@ -43,6 +43,7 @@ set formatoptions-=or
 
 " linenumbering
 set nu
+set relativenumber
 
 " search
 set incsearch " start search as you type
