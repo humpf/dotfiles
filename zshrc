@@ -11,7 +11,7 @@ HISTSIZE=1000
 SAVEHIST=1000
 # End of lines configured by zsh-newuser-install
 # browser
-export BROWSER=dwb
+export BROWSER=firefox
 # editor vim
 export EDITOR=vim
 # colors
