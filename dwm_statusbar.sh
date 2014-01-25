@@ -16,7 +16,7 @@ battery () {
     else 
         bat_sym=$(echo '\x03\uE030')
     fi
-    echo -e "$bat_c_sym$bat_sym:$bat_perc\x01"
+    echo -e "$bat_c_sym$bat_sym:$bat_perc\x02"
 }
 mem () {
     me=$(free -m | awk '/^-/ {print$3}')
