@@ -1,3 +1,4 @@
+#!/bin/bash
 battery () {
     bat_perc=$(acpi -b | sed 's/,/ /g' | awk '{print$4}')
     bat_num=$(echo $bat_perc | sed 's/%/ /')
@@ -44,4 +45,18 @@ vol () {
     fi
     echo -e "\x06$vol_sym:$volume\x01"
 }
-xsetroot -name "$(cpu) $(mem) $(vol) $(battery) $(date +"%d-%m-%y %R")"
+while true; do
+    xsetroot -name "$(echo -e "\x06\uE066"):$speed_kbs_trans kb/s $(echo -e "\x07\uE067"):$speed_kbs kb/s $(cpu) $(mem) $(vol) $(battery)  $(date +"%d-%m-%y %R")"
+
+    #network upload speed
+    new_bytes=$(cat /sys/class/net/wlp3s0/statistics/rx_bytes)
+    let speed=($new_bytes-$old_bytes)/3
+    let speed_kbs=$speed/1024
+    old_bytes=$new_bytes
+
+    new_bytes_trans=$(cat /sys/class/net/wlp3s0/statistics/tx_bytes)
+    let speed_trans=($new_bytes_trans-$old_bytes_trans)/3
+    let speed_kbs_trans=$speed_trans/1024
+    old_bytes_trans=$new_bytes_trans
+    sleep 3s
+done
