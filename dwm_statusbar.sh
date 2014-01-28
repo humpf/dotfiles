@@ -21,11 +21,11 @@ battery () {
 }
 mem () {
     me=$(free -m | awk '/^-/ {print$3}')
-    echo -e "\x08Mem:$me\x01"
+    echo -e "\x08\uE021:$me\x01"
 }
 cpu () {
     cpu=$(ps aux | awk {'sum+=$3;print sum'} | tail -n1)
-    echo -e "\x09Cpu:$cpu%\x01"
+    echo -e "\x09\uE026:$cpu%\x01"
 }
 vol () {
     volume=$(amixer get PCM | egrep -o -m1 "[0-9]+%")
