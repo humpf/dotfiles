@@ -46,7 +46,7 @@ vol () {
     echo -e "\x06$vol_sym:$volume\x01"
 }
 while true; do
-    xsetroot -name "$(echo -e "\x06\uE066"):$speed_kbs_trans kb/s $(echo -e "\x07\uE067"):$speed_kbs kb/s $(cpu) $(mem) $(vol) $(battery)  $(date +"%d-%m-%y %R")"
+    xsetroot -name "$(echo -e "\x06\uE066"):${speed_kbs_trans}kb/s $(echo -e "\x07\uE067"):${speed_kbs}kb/s $(cpu) $(mem) $(vol) $(battery)  $(date +"%d-%m-%y %R")"
 
     #network upload speed
     new_bytes=$(cat /sys/class/net/wlp3s0/statistics/rx_bytes)
