@@ -6,7 +6,7 @@ battery () {
     if [ "$bat_charge" == "Discharging" ];then
         bat_c_sym=$(echo "")
     else 
-        bat_c_sym=$(echo '\uE041')
+        bat_c_sym=$(echo '\x05\uE041')
     fi
     if [ $bat_num -gt 75 ]; then
         bat_sym=$(echo '\x04\uE033')
