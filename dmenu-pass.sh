@@ -2,6 +2,6 @@
 
 passdir=~/.password-store
 
-site=$(find $passdir -name "*.gpg" | awk -F \/ '{print $NF}' | sed "s/.gpg//"| dmenu)
+site=$(find $passdir -name "*.gpg" | sed "s#/home/arne/.password-store/##" | sed "s/.gpg//"| dmenu)
 pass -c $site
 ~/dotfiles/autotype.sh
