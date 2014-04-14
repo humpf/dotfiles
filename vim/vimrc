@@ -1,9 +1,6 @@
 "vim config file
 filetype off
 
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
-
 " not compatible with vi 
 set nocompatible
 
