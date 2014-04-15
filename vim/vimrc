@@ -4,6 +4,14 @@ filetype off
 " not compatible with vi 
 set nocompatible
 
+" vundle plugin
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+" plugins to load
+Plugin 'scrooloose/syntastic'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-surround'
+Plugin 'git://git.code.sf.net/p/vim-latex/vim-latex'
 " show mode your in
 set showmode
 
@@ -83,8 +91,8 @@ set nobackup
 set nowb
 
 " tex type latex
-let g:tex_flavor='latex'
-let g:Tex_DefaultTargetFormat='pdf'
-let g:Tex_SmartKeyQuote=0
+"let g:tex_flavor='latex'
+"let g:Tex_DefaultTargetFormat='pdf'
+"let g:Tex_SmartKeyQuote=0
 set shellslash
 set grepprg=grep\ -nH\ $*
