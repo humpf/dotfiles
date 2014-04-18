@@ -24,7 +24,12 @@ mem () {
     echo -e "\x08\uE021:$me\x01"
 }
 cpu () {
-    cpu=$(ps aux | awk {'sum+=$3;print sum'} | tail -n1)
+    read cpu a b c previdle rest < /proc/stat
+    prevtotal=$((a+b+c+previdle))
+    sleep 0.5
+    read cpu a b c idle rest < /proc/stat
+    total=$((a+b+c+idle))
+    cpu=$((100*( (total-prevtotal) - (idle-previdle) )/ (total-prevtotal) ))
     echo -e "\x09\uE026:$cpu%\x01"
 }
 vol () {
