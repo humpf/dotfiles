@@ -5,6 +5,7 @@ set hintchars=asdfjkl;qweruiop
 set incsearch
 set ignorecase
 set shell=/bin/bash
+set gui=nonavigation
 command -nargs=0 youdown :execute "!youtube-dl " + content.location.href
 command -nargs=0 youplay :execute '!~/dotfiles/youtube_mplayer.sh ' + content.location.href 
 map <silent> v :youplay <CR>
