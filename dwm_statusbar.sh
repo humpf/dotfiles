@@ -26,7 +26,7 @@ mem () {
 cpu () {
     read cpu a b c previdle rest < /proc/stat
     prevtotal=$((a+b+c+previdle))
-    sleep 0.5
+    sleep 1
     read cpu a b c idle rest < /proc/stat
     total=$((a+b+c+idle))
     cpu=$((100*( (total-prevtotal) - (idle-previdle) )/ (total-prevtotal) ))
@@ -55,12 +55,12 @@ while true; do
 
     #network upload speed
     new_bytes=$(cat /sys/class/net/wlp3s0/statistics/rx_bytes)
-    let speed=($new_bytes-$old_bytes)/3
+    let speed=($new_bytes-$old_bytes)/4
     let speed_kbs=$speed/1024
     old_bytes=$new_bytes
 
     new_bytes_trans=$(cat /sys/class/net/wlp3s0/statistics/tx_bytes)
-    let speed_trans=($new_bytes_trans-$old_bytes_trans)/3
+    let speed_trans=($new_bytes_trans-$old_bytes_trans)/4
     let speed_kbs_trans=$speed_trans/1024
     old_bytes_trans=$new_bytes_trans
     sleep 3s
