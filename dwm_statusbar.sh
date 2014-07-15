@@ -1,8 +1,7 @@
 #!/bin/bash
 battery () {
-    bat_perc=$(acpi -b | sed 's/,/ /g' | awk '{print$4}')
-    bat_num=$(echo $bat_perc | sed 's/%/ /')
-    bat_charge=$(acpi -b | sed 's/,//g' | awk '{print$3}')
+    bat_num=$(cat /sys/class/power_supply/BAT1/capacity)
+    bat_charge=$(cat /sys/class/power_supply/BAT1/status)
     if [ "$bat_charge" == "Discharging" ];then
         bat_c_sym=$(echo "")
     else 
@@ -17,7 +16,7 @@ battery () {
     else 
         bat_sym=$(echo '\x03\uE030')
     fi
-    echo -e "$bat_c_sym$bat_sym:$bat_perc\x02"
+    echo -e "$bat_c_sym$bat_sym:$bat_num%\x02"
 }
 mem () {
     me=$(free -m | awk '/^-/ {print$3}')
