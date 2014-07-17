@@ -9,6 +9,8 @@ zstyle ':completion:*' menu select
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
+# history search
+bindkey '^R' history-incremental-pattern-search-backward
 # End of lines configured by zsh-newuser-install
 # browser
 export BROWSER=firefox
