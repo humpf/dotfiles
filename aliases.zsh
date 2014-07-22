@@ -55,12 +55,6 @@ alias gothic='wine ~/.wine/drive_c/Program\ Files/Jowood/Gothic\ II/System/Gothi
 # start mount and blade
 alias mnb='wine ~/.wine/drive_c/Program\ Files/Mount\&Blade\ Warband/mb_warband.exe'
 
-# search on the internet in firefox
-alias gog='surfraw google'
-
-# start iftop on wireless
-#alias iftop='sudo iftop -i wlan0'
-
 #watch rar videos + password
 alias vid='~/scripts/video.sh'
 
@@ -86,11 +80,6 @@ alias valiases='vim ~/dotfiles/aliases.zsh'
 alias vvim='vim ~/.vim/vimrc'
 alias vawesome='vim ~/.config/awesome/rc.lua'
 alias vluakit='vim ~/.config/luakit/rc.lua'
-
-# rtmp livestreams
-sniff-begin() { sudo iptables -t nat -A OUTPUT -p tcp --dport 1935 -m owner \! --uid-owner root -j REDIRECT ;}
-sniff-capture-rtmpsrv() { rtmpsrv ;}
-sniff-end() { sudo iptables -t nat -D OUTPUT -p tcp --dport 1935 -m owner \! --uid-owner root -j REDIRECT ;}
 
 # fasd quick opening
 alias v='f -e vim'
