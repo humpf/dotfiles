@@ -30,10 +30,10 @@ alias distup='sudo apt-get update && sudo apt-get dist-upgrade'
 alias windows='sudo mount -t ntfs /dev/sda1 /media/windows'
 
 # apt-get aliases
-alias ai='sudo apt-get install'
-alias as='apt-cache search'
-alias ap='sudo apt-get purge'
-alias ar='sudo apt-get remove'
+#alias ai='sudo apt-get install'
+#alias as='apt-cache search'
+#alias ap='sudo apt-get purge'
+#alias ar='sudo apt-get remove'
 # ask before override
 
 #alias cp='cp -i'
