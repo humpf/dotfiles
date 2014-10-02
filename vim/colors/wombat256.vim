@@ -59,6 +59,12 @@ hi Repeat		ctermfg=299		cterm=none		guifg=#000000	gui=none
 hi Conditional	ctermfg=210		cterm=none		guifg=#000000	gui=none
 hi Operator		ctermfg=333		cterm=none		guifg=#000000	gui=none
 
+" diffmode by me
+hi DiffAdd		ctermfg=white		cterm=bold		guifg=#000000	gui=none ctermbg=10
+hi DiffChange	ctermfg=0		cterm=bold		guifg=#000000	gui=none ctermbg=11
+hi DiffText		ctermfg=0		cterm=bold		guifg=#000000	gui=none ctermbg=7
+hi DiffDelete	ctermfg=0		cterm=bold		guifg=#000000	gui=none ctermbg=12
+
 " Links
 hi! link FoldColumn		Folded
 hi! link CursorColumn	CursorLine
