@@ -85,6 +85,9 @@ alias vluakit='vim ~/.config/luakit/rc.lua'
 alias v='f -e vim'
 alias m='f -e mplayer'
 
+# uni mail
+alias muttuni='mutt -F ~/.mutt/muttrc-uni'
+
 # mountie script
 alias mountie='python3 ~/Compile/mountie/mountie.py'
 
