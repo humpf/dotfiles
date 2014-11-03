@@ -96,4 +96,4 @@ alias hdleft='xrandr --output HDMI1 --auto --left-of LVDS1 && mv ~/.asoundhdmi ~
 # HDMI turn off
 alias hdoff='xrandr --output HDMI1 --off && mv ~/.asoundrc ~/.asoundhdmi'
 
-alias jbstream='mpv --cache=2048 rtmp://videocdn-us.geocdn.scaleengine.net/jblive/live/jblive.stream'
+alias jbstream='mpv --fs --cache=2048 rtmp://videocdn-us.geocdn.scaleengine.net/jblive/live/jblive.stream'
