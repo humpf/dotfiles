@@ -19,7 +19,7 @@ battery () {
     echo -e "$bat_c_sym$bat_sym:$bat_num%\x02"
 }
 mem () {
-    me=$(free -m | awk '/^-/ {print$3}')
+    me=$(free -m | awk '/^Mem/ {print$3}')
     echo -e "\x08\uE021:$me\x01"
 }
 cpu () {
