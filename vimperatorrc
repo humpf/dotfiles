@@ -10,3 +10,6 @@ set defsearch=go
 command -nargs=0 youdown :execute "!youtube-dl " + content.location.href
 command -nargs=0 youplay :execute '!~/dotfiles/youtube_mplayer.sh ' + content.location.href 
 map <silent> v :youplay <CR>
+" link highlight bigger
+colorscheme sweets_snaka
+highlight Hint -append font-size:150%
