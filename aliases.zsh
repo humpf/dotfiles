@@ -81,6 +81,8 @@ alias vvim='vim ~/.vim/vimrc'
 alias vawesome='vim ~/.config/awesome/rc.lua'
 alias vluakit='vim ~/.config/luakit/rc.lua'
 
+# emacs in terminal
+alias enw='emacs -nw'
 # fasd quick opening
 alias v='f -e vim'
 alias m='f -e mplayer'
