@@ -95,6 +95,7 @@ alias mountie='python3 ~/Compile/mountie/mountie.py'
 
 # HDMI left of LVDS
 alias hdleft='xrandr --output HDMI1 --auto --left-of LVDS1 && mv ~/.asoundhdmi ~/.asoundrc'
+alias hdright='xrandr --output HDMI1 --auto --right-of LVDS1 && mv ~/.asoundhdmi ~/.asoundrc'
 # HDMI turn off
 alias hdoff='xrandr --output HDMI1 --off && mv ~/.asoundrc ~/.asoundhdmi'
 
