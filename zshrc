@@ -13,7 +13,7 @@ SAVEHIST=1000
 bindkey '^R' history-incremental-pattern-search-backward
 # End of lines configured by zsh-newuser-install
 # browser
-export BROWSER=firefox
+export BROWSER=google-chrome-stable
 # editor vim
 export EDITOR=vim
 # colors
