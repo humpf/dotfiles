@@ -80,6 +80,8 @@ alias valiases='vim ~/dotfiles/aliases.zsh'
 alias vvim='vim ~/.vim/vimrc'
 alias vawesome='vim ~/.config/awesome/rc.lua'
 alias vluakit='vim ~/.config/luakit/rc.lua'
+alias vi3='vim ~/.i3/config'
+alias viblocks='vim ~/.i3blocks.conf'
 
 # emacs in terminal
 alias enw='emacs -nw'
