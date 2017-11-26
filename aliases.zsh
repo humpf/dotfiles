@@ -77,6 +77,7 @@ alias vconky='vim ~/.conkyrc'
 alias vurls='vim ~/.newsbeuter/urls'
 alias vtmux='vim ~/.tmux.conf'
 alias valiases='vim ~/dotfiles/aliases.zsh'
+alias vzsh='vim ~/.zshrc'
 alias vvim='vim ~/.vim/vimrc'
 alias vawesome='vim ~/.config/awesome/rc.lua'
 alias vluakit='vim ~/.config/luakit/rc.lua'
@@ -102,3 +103,21 @@ alias hdright='xrandr --output HDMI1 --auto --right-of LVDS1 && mv ~/.asoundhdmi
 alias hdoff='xrandr --output HDMI1 --off && mv ~/.asoundrc ~/.asoundhdmi'
 
 alias jbstream='mpv --fs --cache=2048 rtmp://videocdn-us.geocdn.scaleengine.net/jblive/live/jblive.stream'
+
+#markdown picture clipper
+alias markim='~/scripts/markim.sh'
+
+# mnb warband
+alias mnb='wine ~/.wine/drive_c/Program\ Files\ \(x86\)/Mount\&Blade\ Warband/mb_warband.exe'
+#F.E.A.R
+alias fear='wine ~/.wine/drive_c/GOG\ Games/F.E.A.R.\ Platinum\ Collection/FEAR.exe'
+
+#mount encrypted
+alias menc='encfs ~/encrypt ~/mount_enc'
+#unmount encrypted
+alias umenc='fusermount -u ~/mount_enc'
+
+#mount phone
+alias mphone='jmtpfs ~/phone'
+#umount phone
+alias uphone='fusermount -u ~/phone'
