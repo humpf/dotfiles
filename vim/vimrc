@@ -100,3 +100,6 @@ let g:Tex_DefaultTargetFormat='pdf'
 let g:Tex_SmartKeyQuote=0
 set shellslash
 set grepprg=grep\ -nH\ $*
+
+" Open markdown files with Chrome.
+autocmd BufEnter *.md exe 'noremap <F5> :!google-chrome-stable %:p<CR>'
